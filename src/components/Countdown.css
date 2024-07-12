@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: 'Creepster', 'Courier New', Courier, monospace;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    background-image: url('../../public/images/halloween-background.gif');
+    background-size: cover;
+}
+
+.countdown {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.glitch.demon {
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+    color: red;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.8);
+    animation: glitch-animation 2s infinite;
+}
+
+@keyframes glitch-animation {
+    0% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(2px, -2px);
+    }
+    50% {
+        transform: translate(-2px, 2px);
+    }
+    75% {
+        transform: translate(2px, 2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.angel {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
+    color: #035a7c;
+}
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.time-number {
+    display: block;
+    font-size: 3rem;
+    color: #0985d8;
+}
+
+.time-label {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .glitch {
+        font-size: 2.5rem;
+    }
+    .time-box {
+        padding: 15px;
+    }
+    .time-number {
+        font-size: 2rem;
+    }
+    .time-label {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .glitch {
+        font-size: 2rem;
+    }
+    .time-box {
+        padding: 10px;
+    }
+    .time-number {
+        font-size: 1.5rem;
+    }
+    .time-label {
+        font-size: 0.8rem;
+    }
+}
